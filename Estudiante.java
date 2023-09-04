@@ -7,6 +7,7 @@
 
 public class Estudiante {
     
+    //atributos
     private String nombre;
 
     private String Apellido;
@@ -23,6 +24,7 @@ public class Estudiante {
 
     private String Campus;
 
+    //constrructor con parametros
     public Estudiante(String nombre, String Apellido, long CUI, int mes_de_nacimiento, int dia_de_nacimiento, int año_de_nacimiento, String Correo_electronico, String Campus) {
         this.nombre = nombre;
         this.Apellido = Apellido;
@@ -36,6 +38,7 @@ public class Estudiante {
 
     }
 
+    //setter y getters 
     public String getNombre() {
         return nombre;
     }

@@ -6,17 +6,20 @@
  */
 public class Exam {
     
+    //atributos
     private String tipo;
 
     private Estudiante usuario;
 
     private int nota;
 
+    //constrructor con parametros
     Exam(String tipo, Estudiante usuario){
         this.tipo = tipo;
         this.usuario = usuario;
     }
 
+    //setters y getters
     public String getTipo() {
         return tipo;
     }
