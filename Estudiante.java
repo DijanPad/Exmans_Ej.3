@@ -11,7 +11,7 @@ public class Estudiante {
 
     private String Apellido;
 
-    private int CUI;
+    private long CUI;
 
     private int mes_de_nacimiento;
 
@@ -22,6 +22,19 @@ public class Estudiante {
     private String Correo_electronico;
 
     private String Campus;
+
+    public Estudiante(String nombre, String Apellido, long CUI, int mes_de_nacimiento, int dia_de_nacimiento, int año_de_nacimiento, String Correo_electronico, String Campus) {
+        this.nombre = nombre;
+        this.Apellido = Apellido;
+        this.CUI = CUI;
+        this.mes_de_nacimiento = mes_de_nacimiento;
+        this.dia_de_nacimiento = dia_de_nacimiento;
+        this.año_de_nacimiento = año_de_nacimiento;
+        this.Correo_electronico = Correo_electronico;
+        this.Campus = Campus;
+
+
+    }
 
     public String getNombre() {
         return nombre;

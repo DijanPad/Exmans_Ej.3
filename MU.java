@@ -21,6 +21,8 @@ public class MU {
     Sedelist.add(sede1);
     Sedelist.add(sede2);
     Sedelist.add(sede3);
+    (sede1.getExamList()).add(new Exam("Matematicas", new Estudiante("Billy", "Joel", 231433241, 6, 4, 1964, "billyjoel@gmail.com", "Norte")));
+
 
     boolean run =  true;
     String inputString = "";
@@ -29,7 +31,7 @@ public class MU {
     while (run == true){
         System.out.println("");
         System.out.println("1. Ingresar nuevo estudiante");
-        System.out.println("2. Ingresar por csv (solo estructura)");
+        System.out.println("2. Ingresar por csv (opcion en desarrollo)");
         System.out.println("3. Ingresar notas");
         System.out.println("4. Mostrar estadísticas");
         System.out.println("5. Agregar nueva sede");
@@ -48,23 +50,25 @@ public class MU {
     }
     else if (inputOption == 3) {
 
-        // catcher = scanner.nextLine();
-        // System.out.println(catcher);    
-        // for (int i = 0; i < Sedelist.size(); i++){
-        //     Sede sede = Sedelist.get(i);
-        //     ArrayList<Exam> exlist = sede.getExamList();
-        //     for (int j = 0; j < exlist.size(); j++){
-        //         Exam ex = exlist.get(j);
-        //         Estudiante stud = ex.getUsuario();
-        //         System.out.println(stud.getNombre());
-        //         ex.setNota(j);
-        // }
-        // }
+        catcher = scanner.nextLine();
+        System.out.println(catcher);    
+        for (int i = 0; i < Sedelist.size(); i++){
+            Sede sede = Sedelist.get(i);
+            ArrayList<Exam> exlist = sede.getExamList();
+
+            for (int j = 0; j < exlist.size(); j++){
+                Exam ex = exlist.get(j);
+                Estudiante stud = ex.getUsuario();
+                System.out.println(stud.getNombre());
+                ex.setNota(j);
+        }
+        }
         
     }
     else if (inputOption == 4) {
     for (int i = 0; i < Sedelist.size(); i++){
                 Sede sede = Sedelist.get(i);
+                System.out.println("============ Sede " + sede.getNameSede() + " ============");
                 System.out.println("Media: " + sede.mean());
                 System.out.println("Mediana: " + sede.median());
                 System.out.println("Moda: " + sede.estDesv());
@@ -77,7 +81,7 @@ public class MU {
     else if (inputOption == 5) {
         catcher = scanner.nextLine();
         System.out.println(catcher);
-
+        System.out.println("Ingrese el nombre de la Sede: ");
         inputString = scanner.nextLine();
         Sedelist.add(new Sede(inputString));
 

@@ -12,6 +12,11 @@ public class Exam {
 
     private int nota;
 
+    Exam(String tipo, Estudiante usuario){
+        this.tipo = tipo;
+        this.usuario = usuario;
+    }
+
     public String getTipo() {
         return tipo;
     }
