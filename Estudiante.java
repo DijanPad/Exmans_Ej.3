@@ -52,11 +52,11 @@ public class Estudiante {
         Apellido = apellido;
     }
 
-    public int getCUI() {
+    public long getCUI() {
         return CUI;
     }
 
-    public void setCUI(int cUI) {
+    public void setCUI(long cUI) {
         CUI = cUI;
     }
 
